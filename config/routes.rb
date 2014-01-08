@@ -8,7 +8,7 @@ MyApp::Application.routes.draw do
   
   resources :questionbanks do
     collection do
-      get :addQuestions      
+      get :addquestions      
     end
   end
   

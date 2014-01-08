@@ -2,13 +2,26 @@
 <html>
 <head>
   <title>MyApp</title>
+  <link rel="stylesheet" type="text/css" href="mycss/mystyle.css"/>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div id="outerDIV">
+		<div id="header">
+			<h1>**Welcome**</h1>
+			<p>Welcome to myApp</p>
+		</div>
+		
+		<div id="mid"style="margin-top: 30px;">
+		    <%= yield %>
+		</div>
+		<div id="footer" style="margin-top: 30px;">
+			<p style="padding-top: 30px;">&#169 TT&COMPANY</p>
+		</div>
+	</div>
 
-<%= yield %>
 
 </body>
 </html>
