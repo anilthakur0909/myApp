@@ -12,6 +12,7 @@ MyApp::Application.routes.draw do
    resources :genratetest do
      collection do
        get "testgenerate"
+       get "export_csv_test"
      end
    end
   
