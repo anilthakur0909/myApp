@@ -1,0 +1,2 @@
+class AddobjectivequestionsController < ApplicationController
+end

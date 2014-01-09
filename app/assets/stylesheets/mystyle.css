@@ -1,0 +1,40 @@
+body{
+	background-color:#64707C;
+
+}
+
+h1{
+	text-align:center;
+}
+
+h3{
+	text-align:center;
+}
+
+p {
+	text-align:center;
+}
+#outerDIV{
+	width: 1000px; 
+	height:500px; 
+	border-color: black; 
+	border-width: 2px; 
+	background-color: gray; 
+	margin: auto;
+}
+
+#header{
+	height:100px;
+	background-color:#A6AFFD;
+}
+
+#mid{
+
+	background-color:#A6AFB7;
+	height:1000px;
+}
+
+#footer{
+	height:100px;
+	background-color:#A6AFFD;
+}

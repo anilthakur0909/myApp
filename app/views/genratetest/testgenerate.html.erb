@@ -1,0 +1,21 @@
+<h3>**Test Paper**</h3>
+<hr/>
+
+	<%i=1%>
+	<% @my_question_array.each do |qs|%>
+		<table>
+			<tr>
+				<td><%= i%></td><td></td>
+				<td><%= qs.questions%></td><td></td><td></td><td></td>
+				<td><%= qs.marks%></td>
+			</tr>
+			<%i=i+1%>
+		</table>
+	<%end%>
+<hr/>
+<ul>
+	<li><h4><%= link_to "Home Page", :controller => "welcome", :action => "index"%></h4></li>
+	<li><h4><%= link_to "Add New Question", :controller => "questionbanks", :action => "new"%></h4></li>
+	<li><h4><%= link_to "Generate test", :controller => "genratetest", :action => "new"%></h4></li>
+	<li><h4><%= link_to "Print test", :controller => "genratetest", :action => "export_csv_test"%></li>
+</ul>

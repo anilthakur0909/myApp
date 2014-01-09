@@ -1,0 +1,53 @@
+<hr/>
+<h3>**Generate Test**</h3>
+<hr/>
+<%= form_for @questionbank, url: {action:"testgenerate"}, html: {:method => :get}  do |f|%>
+	<table>
+		<tr>
+			<th>			
+				<%= f.label :class_value, "Class"%>
+			</th>
+			<td>
+				<%= f.select :class_value, [['11th','11'],['12th','12']]%><br>
+			</td>
+		</tr>
+		<tr></tr><tr></tr>
+		<tr>
+			<th>
+				<%= f.label :chapter, "Unit"%>
+		</th>
+			<td>
+				<%= f.select :chapter,[['1st','1'],['2nd','2'],['3rd','3'],['4th','4'],['5th','5'],['6th','6'],['7th','7'],['8th','8'],['9th','9'],['10th','10']]%><br/>
+			</td>
+		</tr>
+	    <tr></tr><tr></tr>
+		
+		<tr>
+			<th>
+				<%= f.label :marks, "Pattern"%>
+			</th>
+		
+			<td>
+				<%= f.select :marks, [['15 Marks','15'],['25 Marks','25'],['35 Marks','35'],['70 Marks','70']]%><br>
+			</td>
+		</tr>
+		<tr></tr><tr></tr>
+
+		<tr></tr>
+		<tr>
+			<th></th>
+			<td>
+				<%= f.submit "Generate Test"%>
+			</td>
+		</tr>
+	</table>
+
+<%end%>
+<hr/>
+<ul>
+	<li><h4><%= link_to "Home Page", :controller => "welcome", :action => "index"%></h4></li>
+	<li><h4><%= link_to "Add New Question", :controller => "questionbanks", :action => "new"%></h4></li>
+	<li><h4><%= link_to "Generate test", :controller => "genratetest", :action => "new"%></h4><br></li>
+</ul>
+<hr/>
+			
