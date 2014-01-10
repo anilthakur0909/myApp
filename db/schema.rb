@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20140109121655) do
     t.integer  "option2"
     t.integer  "option3"
     t.integer  "option4"
+    t.integer  "correct_answer"
     t.integer  "objective_question_id"
     t.datetime "created_at"
     t.datetime "updated_at"
