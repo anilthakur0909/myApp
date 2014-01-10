@@ -7,6 +7,7 @@ MyApp::Application.routes.draw do
   root "welcome#index"
   
   resources :questionbanks 
+  resources :addobjectivequestions
 
    
    resources :genratetest do
