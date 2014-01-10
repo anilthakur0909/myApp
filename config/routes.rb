@@ -8,6 +8,13 @@ MyApp::Application.routes.draw do
   
   resources :questionbanks 
   resources :addobjectivequestions
+  
+  resources :generateobjectivetest do
+    collection do
+      get "generate_objective_test"
+    end
+  end
+
 
    
    resources :genratetest do

@@ -11,21 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140109121655) do
+ActiveRecord::Schema.define(version: 20140110115554) do
 
-  create_table "answers", force: true do |t|
+  create_table "objective_questions", force: true do |t|
+    t.string   "objective_question"
     t.string   "option1"
     t.string   "option2"
     t.string   "option3"
     t.string   "option4"
-    t.integer  "correct_answer"
-    t.integer  "objective_question_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "objective_questions", force: true do |t|
-    t.string   "objective_question"
+    t.integer  "correct_option"
     t.integer  "user_class"
     t.integer  "chapter_or_topic"
     t.datetime "created_at"

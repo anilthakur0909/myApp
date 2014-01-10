@@ -1,10 +1,7 @@
 require "testlogic"
 require "csv"
 class GenratetestController < ApplicationController
-  # def index
-    # @questionbank=QuestionBank.all
-#     
-  # end
+  
   @@data_csv=[]
   def new
     @questionbank=QuestionBank.new
@@ -13,7 +10,6 @@ class GenratetestController < ApplicationController
     puts "in testgenerate"
     testlogic = TestLogic.new
     p=testgenerate_parameter
-    puts p
     @my_question_array = testlogic.logic(p)
     @@data_csv=@my_question_array
     puts "after logic"
