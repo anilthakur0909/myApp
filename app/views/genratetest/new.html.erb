@@ -1,5 +1,5 @@
 <hr/>
-<h3>**Generate Test**</h3>
+<h3>**Generate Subjective Test**</h3>
 <hr/>
 <%= form_for @questionbank, url: {action:"testgenerate"}, html: {:method => :get}  do |f|%>
 	<table>
@@ -46,8 +46,10 @@
 <hr/>
 <ul>
 	<li><h4><%= link_to "Home Page", :controller => "welcome", :action => "index"%></h4></li>
-	<li><h4><%= link_to "Add New Question", :controller => "questionbanks", :action => "new"%></h4></li>
-	<li><h4><%= link_to "Generate test", :controller => "genratetest", :action => "new"%></h4><br></li>
+	<li><%= link_to "Add Subjective Question", :controller => "questionbanks", :action => "new"%></li><br/>
+	<li><%= link_to "Generate Subjective Test", :controller => "genratetest", :action => "new"%></li><br>
+	<li><%= link_to "Add Objective Questions", :controller => "addobjectivequestions", :action => "new"%></li><br>
+	<li><%= link_to "Genrate Objective Test", :controller => "generateobjectivetest", :action =>"new"%></li><br>
 </ul>
 <hr/>
 			

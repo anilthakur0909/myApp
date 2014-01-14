@@ -1,7 +1,7 @@
 <hr/>
-<h3>**Add the Questions**</h3>
+<h3>**Add new Objective Questions**</h3>
 <hr/>
-<%= form_for @questionbank, url: {action:"create"} do |f|%>
+<%= form_for @questionbank, url: {action:"create"}, html: {:id => "my_form", :onsubmit => "return blank_Validation();"} do |f|%>
 	<table>
 		<tr>
 			<th>			
@@ -37,7 +37,7 @@
 				<%= f.label :questions, "Question" %>
 			</th>
 			<td>
-				<%= f.text_area :questions, size: "100x6"%><br/>
+				<%= f.text_area :questions, size: "100x6", :class => "blank"%><br/>
 			</td>
 		</tr>
 	    <tr></tr><tr></tr>
@@ -54,7 +54,9 @@
 <hr/>
 <ul>
 	<li><h4><%= link_to "Home Page", :controller => "welcome", :action => "index"%></h4></li>
-	<li><h4><%= link_to "Add New Question", :controller => "questionbanks", :action => "new"%></h4></li>
-	<li><h4><%= link_to "Generate test", :controller => "genratetest", :action => "new"%></h4><br></li>
+	<li><%= link_to "Add Subjective Question", :controller => "questionbanks", :action => "new"%></li><br/>
+	<li><%= link_to "Generate Subjective Test", :controller => "genratetest", :action => "new"%></li><br>
+	<li><%= link_to "Add Objective Questions", :controller => "addobjectivequestions", :action => "new"%></li><br>
+	<li><%= link_to "Genrate Objective Test", :controller => "generateobjectivetest", :action =>"new"%></li><br>
 </ul>
 			

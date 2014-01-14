@@ -6,6 +6,10 @@ body{
 h1{
 	text-align:center;
 }
+h2{
+	text-align:center;
+}
+
 
 h3{
 	text-align:center;
@@ -14,9 +18,13 @@ h3{
 p {
 	text-align:center;
 }
+
+a{
+	text-decoration: none;
+}
+
 #outerDIV{
-	width: 1000px; 
-	height:500px; 
+	width: 1000px;  
 	border-color: black; 
 	border-width: 2px; 
 	background-color: gray; 
@@ -31,7 +39,7 @@ p {
 #mid{
 
 	background-color:#A6AFB7;
-	height:1000px;
+
 }
 
 #footer{

@@ -12,6 +12,7 @@ MyApp::Application.routes.draw do
   resources :generateobjectivetest do
     collection do
       get "generate_objective_test"
+      get "result"
     end
   end
 
@@ -21,6 +22,7 @@ MyApp::Application.routes.draw do
      collection do
        get "testgenerate"
        get "export_csv_test"
+       
      end
    end
   
