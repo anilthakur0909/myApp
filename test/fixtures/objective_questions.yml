@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  objective_question: MyString
+  option1: MyString
+  option2: MyString
+  option3: MyString
+  option4: MyString
+  correct_option: 1
+  user_class: 1
+  chapter_or_topic: 1
+
+two:
+  objective_question: MyString
+  option1: MyString
+  option2: MyString
+  option3: MyString
+  option4: MyString
+  correct_option: 1
+  user_class: 1
+  chapter_or_topic: 1

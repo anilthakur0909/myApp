@@ -1,0 +1,84 @@
+<h3>**Objective Test Paper**</h3>
+<hr/>
+<%= form_tag('/generateobjectivetest/result', {:method => :get}) do %>
+	<%i=1%>
+	<% @my_objective_question_array.each do |qs|%>
+		
+		<table>
+			<tr>
+				<th>
+					<%=i%>
+				</th>
+				<td>
+					<%= qs.objective_question%>
+				</td>
+			</tr>
+			
+			<tr>
+				 <td>
+				 	<%= label_tag "option1", "A"%> 
+				 </td> 
+				 
+				 <td>
+				 	<%= radio_button_tag "option".concat("[#{qs.id}]"), "1"%>
+				 </td>  
+				 
+				 <td>
+				 	<%= qs.option1%>
+				 </td>
+			</tr>
+			<tr>
+				 <td>
+				 	<%= label_tag "option2", "B"%> 
+				 </td> 
+				 
+				 <td>
+				 	<%= radio_button_tag "option[#{qs.id}]", "2"%>
+				 </td>  
+				 
+				 <td>
+				 	<%= qs.option2%>
+				 </td>
+			</tr>
+			<tr>
+				 <td>
+				 	<%= label_tag "option3", "C"%> 
+				 </td> 
+				 
+				 <td>
+				 	<%= radio_button_tag "option[#{qs.id}]", "3"%>
+				 </td>  
+				 
+				 <td>
+				 	<%= qs.option3%>
+				 </td>
+			</tr>
+			<tr>
+				 <td>
+				 	<%= label_tag "option4", "D"%> 
+				 </td> 
+				 
+				 <td>
+				 	<%= radio_button_tag "option[#{qs.id}]", "4"%>
+				 </td>  
+				 
+				 <td>
+				 	<%= qs.option4%>
+				 </td>
+			</tr>
+			<hr/>
+			<%i=i+1%>
+		</table>
+	<%end%>
+	<hr/>
+	<%= submit_tag "Submit Test"%>
+<%end%>
+<hr/>
+<ul>
+	<li><h4><%= link_to "Home Page", :controller => "welcome", :action => "index"%></h4></li>
+	<li><%= link_to "Add Subjective Question", :controller => "questionbanks", :action => "new"%></li><br/>
+	<li><%= link_to "Generate Subjective Test", :controller => "genratetest", :action => "new"%></li><br>
+	<li><%= link_to "Add Objective Questions", :controller => "addobjectivequestions", :action => "new"%></li><br>
+	<li><%= link_to "Genrate Objective Test", :controller => "generateobjectivetest", :action =>"new"%></li><br>
+</ul>
+

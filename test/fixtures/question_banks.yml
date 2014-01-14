@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  questions: MyString
+  marks: 1
+  class: 1
+  chapter: 1
+
+two:
+  questions: MyString
+  marks: 1
+  class: 1
+  chapter: 1

@@ -1,0 +1,19 @@
+<h2>Result</h2><hr/>
+<h3>
+<b><%= label_tag "Correct Answer="%></b>
+<%= @result[:correct_answer]%><br>
+<b><%= label_tag "Wrong Answer="%></b>
+<%= @result[:wrong_answer]%>
+</h3>
+
+
+
+<hr/>
+<ul>
+	<li><h4><%= link_to "Home Page", :controller => "welcome", :action => "index"%></h4></li>
+	<li><%= link_to "Add New Question", :controller => "questionbanks", :action => "new"%></li><br/>
+	<li><%= link_to "Generate Subjective Test", :controller => "genratetest", :action => "new"%></li><br>
+	<li><%= link_to "Add Objective Questions", :controller => "addobjectivequestions", :action => "new"%></li><br>
+	<li><%= link_to "Genrate Objective Test", :controller => "generateobjectivetest", :action =>"new"%></li><br>
+	</ul>
+<hr/>

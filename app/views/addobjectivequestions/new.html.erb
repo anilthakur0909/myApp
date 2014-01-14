@@ -1,0 +1,114 @@
+<hr/>
+<h3>**Add Objective Questions**</h3>
+<hr/>
+<%= form_for @objectivequestion, url: {action:"create"}, html: {:id => "my_form", :onsubmit => "return blank_Validation();"} do |f|%>
+	<table>
+		
+		<tr>
+			<th>			
+				<%= f.label :user_class, "Class"%>
+			</th>
+			<td>
+				<%= f.select :user_class, [['11th','11'],['12th','12']]%><br>
+			</td>
+		</tr>
+		
+		<tr></tr><tr></tr>
+		
+		<tr>
+			<th>
+				<%= f.label :chapter_or_topic, "Unit"%>
+		</th>
+			<td>
+				<%= f.select :chapter_or_topic, [['1st','1'],['2nd','2'],['3rd','3'],['4th','4'],['5th','5'],['6th','6'],['7th','7'],['8th','8'],['9th','9'],['10th','10']]%><br/>
+			</td>
+		</tr>
+		
+		<tr></tr><tr></tr>
+		
+		<tr>
+			<th>
+				<%= f.label :objective_question, "Question" %>
+			</th>
+			<td>
+				<%= f.text_area :objective_question, size: "100x6", :class => "blank"%><br/>
+			</td>
+		</tr>
+		
+	    <tr></tr><tr></tr>
+	    
+
+	    <tr>
+	    	<th>
+	    		<%= f.label :options, "Options"%>
+	    	</th>
+	    <tr>
+	    <tr></tr><tr></tr>
+	    	<tr>
+	    		<th>
+	    			<%= f.label :options1, "Options1"%>
+	    		</th>
+		    	<td>
+		    		<%= f.text_field :option1, :class => "blank"%>
+		    	</td>
+		    </tr>
+	    	
+	    <tr></tr><tr></tr>
+	    	<tr>
+	    		<th>
+	    			<%= f.label :options2, "Options2"%>
+	    		</th>
+		    	<td>
+		    		<%= f.text_field :option2, :class => "blank"%>
+		    	</td>
+		    </tr>
+		   <tr></tr><tr></tr>
+	    	<tr>
+	    		<th>
+	    			<%= f.label :options3, "Options3"%>
+	    		</th>
+		    	<td>
+		    		<%= f.text_field :option3, :class => "blank"%>
+		    	</td>
+		    </tr>
+		   <tr></tr><tr></tr>
+	    	<tr>
+	    		<th>
+	    			<%= f.label :options4, "Options4"%>
+	    		</th>
+		    	<td>
+		    		<%= f.text_field :option4, :class => "blank"%>
+		    	</td>
+		    </tr>
+		   <tr></tr><tr></tr>
+		    <tr>
+		    	<th>
+		    		<%= f.label :correct_option, "Correct_answer"%>
+		    	</th>
+			    <td>
+		    		<%= f.select :correct_option,[['Option1','1'],['Option2','2'],['Option3','3'],['Option4','4']]%>
+		    	</td>
+	    	</tr>
+           <tr></tr><tr></tr>
+	    </tr>
+	    
+	    
+		<tr></tr>
+		<tr>
+			<th></th>
+			<td>
+				<%= f.submit "Submit Question" %>
+			</td>
+		</tr>
+	</table>
+
+<%end%>
+<hr/>
+<ul>
+	<li><h4><%= link_to "Home Page", :controller => "welcome", :action => "index"%></h4></li>
+	<li><%= link_to "Add Subjective Question", :controller => "questionbanks", :action => "new"%></li><br/>
+	<li><%= link_to "Generate Subjective Test", :controller => "genratetest", :action => "new"%></li><br>
+	<li><%= link_to "Add Objective Questions", :controller => "addobjectivequestions", :action => "new"%></li><br>
+	<li><%= link_to "Genrate Objective Test", :controller => "generateobjectivetest", :action =>"new"%></li><br><br>
+</ul>
+			
