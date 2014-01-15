@@ -1,19 +1,26 @@
 <h3>**Test Paper**</h3>
 <hr/>
-
+<%= form_tag('/genratetest/export_csv_test', {:method => :get}) do%>
 	<%i=1%>
+	<% ids=[]%>
 	<% @my_question_array.each do |qs|%>
 		<table>
 			<tr>
 				<td><%= i%></td><td></td>
+				<%= %>
+				<%=hidden_field_tag "ids", ids<< qs.id %>
+			
 				<td><%= qs.questions%></td><td></td><td></td><td></td>
 				<td><%= qs.marks%></td>
+			
 			</tr>
 			<%i=i+1%>
 		</table>
 	<%end%>
 	<hr/>
-	<h3><%= link_to "Click Export to csv", :controller => "genratetest", :action => "export_csv_test"%></h3>
+	<%= submit_tag "Click Export to csv"%>
+<%end%>
+	<hr/>
 <hr/>
 <ul>
 	<li><h4><%= link_to "Home Page", :controller => "welcome", :action => "index"%></h4></li>
