@@ -32,6 +32,11 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+#bootstrap
+gem 'bootstrap-sass'
+group :development do
+  gem 'rails_layout'
+end
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'mysql2'

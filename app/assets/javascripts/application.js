@@ -13,20 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap
 //= require_tree .
-
-function blank_Validation()
-{
-	my_class=document.getElementsByClassName("blank");
-	for(i=0; i<my_class.length;i++)
-	{
-		if(my_class[i].value==null || my_class[i].value=="")
-		{
-		    alert("text field can not be blank");
-		    return false;
-		} 
-	}
-	
-	alert("Add Question to database");
-	return true;
-}

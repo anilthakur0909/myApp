@@ -1,28 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>MyApp</title>
-  <link rel="stylesheet" type="text/css" href="mycss/mystyle.css"/>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-	<div id="outerDIV">
-		<div id="header">
-			
-			<hr/><h1>**Welcome to myApp**</h1><hr/>
-			
-		</div>
-		
-		<div id="mid"style="margin-top: 30px;">
-		    <%= yield %>
-		</div>
-		<div id="footer" style="margin-top: 30px;">
-			<p style="padding-top: 30px;">&#169 TT&COMPANY</p>
-		</div>
-	</div>
-
-
-</body>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "My App" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "My App" %>">
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <header>
+      <%= render 'layouts/navigation' %>
+    </header>
+    <main role="main">
+       <%= render 'layouts/messages' %>
+       <%= yield %>
+    </main>
+  </body>
 </html>
